@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css';
+import Chats from './Chats';
 import Preview from './Preview';
 import WebcamCapture from './WebcamCapture';
 
@@ -12,7 +13,11 @@ function App() {
       <Router>
         <div className='app__body'>
           <Switch>
-          <Route path="/preview">
+            <Route path="/chats">
+              <Chats />
+            </Route>
+
+            <Route path="/preview">
               <Preview />
             </Route>
 
